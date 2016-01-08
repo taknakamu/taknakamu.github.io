@@ -3,9 +3,9 @@
   <title><![CDATA[nmta blog]]></title>
   
   <link href="/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
+  <link href="http://taknakamu.github.io/"/>
   <updated>2016-01-08T07:14:39.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://taknakamu.github.io/</id>
   
   <author>
     <name><![CDATA[nmta]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[hexo's markdown power check]]></title>
-    <link href="http://yoursite.com/2016/01/08/hexo_markdown_power_check/"/>
-    <id>http://yoursite.com/2016/01/08/hexo_markdown_power_check/</id>
+    <link href="http://taknakamu.github.io/2016/01/08/hexo_markdown_power_check/"/>
+    <id>http://taknakamu.github.io/2016/01/08/hexo_markdown_power_check/</id>
     <published>2016-01-08T06:56:44.000Z</published>
     <updated>2016-01-08T07:14:39.000Z</updated>
     <content type="html"><![CDATA[<h2 id="H2"><a href="#H2" class="headerlink" title="H2"></a>H2</h2><h3 id="H3"><a href="#H3" class="headerlink" title="H3"></a>H3</h3><h4 id="H4"><a href="#H4" class="headerlink" title="H4"></a>H4</h4><h5 id="H5"><a href="#H5" class="headerlink" title="H5"></a>H5</h5><h6 id="H6"><a href="#H6" class="headerlink" title="H6"></a>H6</h6><p>Alternatively, for H1 and H2, an underline-ish style:</p>
@@ -132,14 +132,14 @@
     <![CDATA[<h2 id="H2"><a href="#H2" class="headerlink" title="H2"></a>H2</h2><h3 id="H3"><a href="#H3" class="headerlink" title="H3"></a>H3</h3><h4 id]]>
     </summary>
     
-      <category term="diary" scheme="http://yoursite.com/tags/diary/"/>
+      <category term="diary" scheme="http://taknakamu.github.io/tags/diary/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Hello World]]></title>
-    <link href="http://yoursite.com/2016/01/08/hello-world/"/>
-    <id>http://yoursite.com/2016/01/08/hello-world/</id>
+    <link href="http://taknakamu.github.io/2016/01/08/hello-world/"/>
+    <id>http://taknakamu.github.io/2016/01/08/hello-world/</id>
     <published>2016-01-08T06:19:16.000Z</published>
     <updated>2016-01-08T06:19:16.000Z</updated>
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
