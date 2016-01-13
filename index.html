@@ -47,6 +47,109 @@
     <div id="main">
       
   
+    <article id="post-これからReactをはじめる君へ-〜nodeのインストールから〜" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/01/13/これからReactをはじめる君へ-〜nodeのインストールから〜/" class="article-date">
+  <time datetime="2016-01-13T09:45:12.000Z" itemprop="datePublished">2016-01-13</time>
+</a>
+		</span>
+		<span class="meta-elements author">nmta</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/01/13/これからReactをはじめる君へ-〜nodeのインストールから〜/">これからReactをはじめる君へ 〜nodeのインストールから〜</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<h2 id="React_u3092_u306F_u3058_u3081_u308B"><a href="#React_u3092_u306F_u3058_u3081_u308B" class="headerlink" title="Reactをはじめる"></a>Reactをはじめる</h2><p>公式サイト：<a href="https://facebook.github.io/react/" target="_blank" rel="external">https://facebook.github.io/react/</a></p>
+<h4 id="To_install_React_DOM_and_build_your_bundle_with_browserify_3A"><a href="#To_install_React_DOM_and_build_your_bundle_with_browserify_3A" class="headerlink" title="To install React DOM and build your bundle with browserify:"></a>To install React DOM and build your bundle with browserify:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save react react-dom babelify babel-preset-react&#10;$ browserify -t [ babelify --presets [ react ] ] main.js -o bundle.js</span><br></pre></td></tr></table></figure>
+<h4 id="To_install_React_DOM_and_build_your_bundle_with_webpack_3A"><a href="#To_install_React_DOM_and_build_your_bundle_with_webpack_3A" class="headerlink" title="To install React DOM and build your bundle with webpack:"></a>To install React DOM and build your bundle with webpack:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save react react-dom babel-preset-react&#10;$ webpack</span><br></pre></td></tr></table></figure>
+<h2 id="u300Cnpm_u3063_u3066_u306A_u306B_uFF1F_u300D_u3068_u3044_u3046_u4EBA_u306F_u3053_u3053_u304B_u3089"><a href="#u300Cnpm_u3063_u3066_u306A_u306B_uFF1F_u300D_u3068_u3044_u3046_u4EBA_u306F_u3053_u3053_u304B_u3089" class="headerlink" title="「npmってなに？」という人はここから"></a>「npmってなに？」という人はここから</h2><h3 id="Node-js_u3092_u30A4_u30F3_u30B9_u30C8_u30FC_u30EB_u3059_u308B"><a href="#Node-js_u3092_u30A4_u30F3_u30B9_u30C8_u30FC_u30EB_u3059_u308B" class="headerlink" title="Node.jsをインストールする"></a>Node.jsをインストールする</h3><p>直接nodeをインストールしてもいいけど、バージョン上げ下げする必要がある可能性があるので、バージョン管理ツールから入れるのがオススメ。</p>
+<p>直接でいい人は何も考えずに</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure>
+<p>nodeを入れると一緒にnpmも入る。</p>
+<h3 id="node_u306E_u30D0_u30FC_u30B8_u30E7_u30F3_u7BA1_u7406"><a href="#node_u306E_u30D0_u30FC_u30B8_u30E7_u30F3_u7BA1_u7406" class="headerlink" title="nodeのバージョン管理"></a>nodeのバージョン管理</h3><p>バージョン管理ツールいっぱいある。</p>
+<ul>
+<li>nvm</li>
+<li>nodebrew</li>
+<li>ndenv</li>
+</ul>
+<p>ここではndenvを使用する。</p>
+<h4 id="anyenv_u3092_u30A4_u30F3_u30B9_u30C8_u30FC_u30EB"><a href="#anyenv_u3092_u30A4_u30F3_u30B9_u30C8_u30FC_u30EB" class="headerlink" title="anyenvをインストール"></a>anyenvをインストール</h4><p>githubのndenvから直接インストールしたら、READMEにも書いてあるのに、<code>ndenv install</code>コマンドがなくてあせった。</p>
+<p>ndenvはanyenvからインストールする。</p>
+<p>インストール方法は下記などを参考に</p>
+<p><a href="http://qiita.com/nownabe/items/ce344150f7211b9b2a6d" target="_blank" rel="external">http://qiita.com/nownabe/items/ce344150f7211b9b2a6d</a></p>
+<p>これでnodeとnpmのインストールまで完了。</p>
+<h2 id="u300Cbrowserify_2C_webpack_u3063_u3066_u306A_u306B_uFF1F_u300D_u3068_u3044_u3046_u4EBA_u306F_u3053_u3053_u304B_u3089"><a href="#u300Cbrowserify_2C_webpack_u3063_u3066_u306A_u306B_uFF1F_u300D_u3068_u3044_u3046_u4EBA_u306F_u3053_u3053_u304B_u3089" class="headerlink" title="「browserify, webpackってなに？」という人はここから"></a>「browserify, webpackってなに？」という人はここから</h2><p>なんやかんやモジュールとか管理してうまいことしてくれるやつ。</p>
+<p>詳しくはこの辺を参照</p>
+<p><a href="http://qiita.com/yosisa/items/61cfd3ede598e194813b" target="_blank" rel="external">http://qiita.com/yosisa/items/61cfd3ede598e194813b</a></p>
+<p>ここではwebpackを使用する。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;&#10;  entry: &#39;./js/main.js&#39;,&#10;  output: &#123;&#10;    path: __dirname,&#10;    filename: &#39;build/bundle.js&#39;&#10;  &#125;&#10;&#125;;</span><br></pre></td></tr></table></figure>
+<p>ここまでできたら改めて、reactをインストールする。</p>
+<h2 id="React_u3092_u306F_u3058_u3081_u308B_uFF08_u518D_uFF09"><a href="#React_u3092_u306F_u3058_u3081_u308B_uFF08_u518D_uFF09" class="headerlink" title="Reactをはじめる（再）"></a>Reactをはじめる（再）</h2><p><a href="https://facebook.github.io/react/docs/getting-started.html" target="_blank" rel="external">https://facebook.github.io/react/docs/getting-started.html</a></p>
+<h3 id="react_u3092_u30A4_u30F3_u30B9_u30C8_u30FC_u30EB"><a href="#react_u3092_u30A4_u30F3_u30B9_u30C8_u30FC_u30EB" class="headerlink" title="reactをインストール"></a>reactをインストール</h3><h4 id="To_install_React_DOM_and_build_your_bundle_with_webpack_3A-1"><a href="#To_install_React_DOM_and_build_your_bundle_with_webpack_3A-1" class="headerlink" title="To install React DOM and build your bundle with webpack:"></a>To install React DOM and build your bundle with webpack:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save react react-dom babel-preset-react&#10;$ webpack</span><br></pre></td></tr></table></figure>
+<h3 id="u306A_u3093_u304BWARN_u3067_u305F_u4EBA_u306F_u3053_u3053_u3092_u307F_u308B"><a href="#u306A_u3093_u304BWARN_u3067_u305F_u4EBA_u306F_u3053_u3053_u3092_u307F_u308B" class="headerlink" title="なんかWARNでた人はここをみる"></a>なんかWARNでた人はここをみる</h3><h4 id="package-json_u304C_u306A_u3044"><a href="#package-json_u304C_u306A_u3044" class="headerlink" title="package.jsonがない"></a>package.jsonがない</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm WARN ENOENT ENOENT: no such file or directory, open &#39;path/to/package.json&#39;</span><br></pre></td></tr></table></figure>
+<p><code>npm init</code>しよう。</p>
+<h4 id="name_u304Creact"><a href="#name_u304Creact" class="headerlink" title="nameがreact"></a>nameがreact</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save react react-dom babel-preset-react&#10;npm ERR! Darwin 14.5.0&#10;npm ERR! argv &#34;/path/to/.anyenv/envs/ndenv/versions/5.4/bin/node&#34; &#34;/path/to/.anyenv/envs/ndenv/versions/5.4/bin/npm&#34; &#34;install&#34; &#34;--save&#34; &#34;react&#34; &#34;react-dom&#34; &#34;babel-preset-react&#34;&#10;npm ERR! node v5.4.0&#10;npm ERR! npm  v3.3.12&#10;npm ERR! code ENOSELF&#10;&#10;npm ERR! Refusing to install react as a dependency of itself&#10;npm ERR!&#10;npm ERR! If you need help, you may report this error at:&#10;npm ERR!     &#60;https://github.com/npm/npm/issues&#62;&#10;&#10;npm ERR! Please include the following file with any support request:&#10;npm ERR!     /private/var/www/react/npm-debug.log</span><br></pre></td></tr></table></figure>
+<p>なんかいろいろエラー出たらpackage.jsonを確認</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#10;  &#34;name&#34;: &#34;react&#34;,&#10;  &#34;version&#34;: &#34;1.0.0&#34;,&#10;  &#34;description&#34;: &#34;&#34;,&#10;  &#34;main&#34;: &#34;index.js&#34;,&#10;  &#34;dependencies&#34;: &#123;&#125;,&#10;  &#34;devDependencies&#34;: &#123;&#125;,&#10;  &#34;scripts&#34;: &#123;&#10;    &#34;test&#34;: &#34;echo \&#34;Error: no test specified\&#34; &#38;&#38; exit 1&#34;&#10;  &#125;,&#10;  &#34;author&#34;: &#34;&#34;,&#10;  &#34;license&#34;: &#34;ISC&#34;&#10;&#125;</span><br></pre></td></tr></table></figure>
+<p>nameがreactになっていたら違うのにする。</p>
+<h4 id="u30EA_u30DD_u30B8_u30C8_u30EA_u3092_u6307_u5B9A_u3057_u3066_u306A_u3044"><a href="#u30EA_u30DD_u30B8_u30C8_u30EA_u3092_u6307_u5B9A_u3057_u3066_u306A_u3044" class="headerlink" title="リポジトリを指定してない"></a>リポジトリを指定してない</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm WARN EPACKAGEJSON react-tutorial@1.0.0 No repository field.</span><br></pre></td></tr></table></figure>
+<p>リポジトリを指定しない時は、<code>&quot;private&quot;: true</code>を追加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#10;  &#34;name&#34;: &#34;react-tutorial&#34;,&#10;  &#34;version&#34;: &#34;1.0.0&#34;,&#10;  &#34;private&#34;: true,&#10;  ...&#30465;&#30053;...</span><br></pre></td></tr></table></figure>
+<h3 id="Babel_is_a_JavaScript_compiler"><a href="#Babel_is_a_JavaScript_compiler" class="headerlink" title="Babel is a JavaScript compiler."></a>Babel is a JavaScript compiler.</h3><p>とりあえずbabelもいれとけと。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --global babel-cli&#10;npm install babel-preset-react</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">babel --presets react src --watch --out-dir build</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Note:&#10;If you are using ES2015, you will want to also use the babel-preset-es2015 package.</span><br></pre></td></tr></table></figure>
+<p>es2015？という人はこの辺を参考に</p>
+<p><a href="http://qiita.com/kamijin_fanta/items/e8e5fc750b563152bbcf" target="_blank" rel="external">http://qiita.com/kamijin_fanta/items/e8e5fc750b563152bbcf</a></p>
+<h3 id="webpack_u3067babel_u3092_u4F7F_u3046"><a href="#webpack_u3067babel_u3092_u4F7F_u3046" class="headerlink" title="webpackでbabelを使う"></a>webpackでbabelを使う</h3><p>babel-loaderを使います。（don’t use jsx-loader! use babel-loader instead.）</p>
+<p>github: <a href="https://github.com/babel/babel-loader" target="_blank" rel="external">https://github.com/babel/babel-loader</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install babel-loader babel-core babel-preset-es2015 babel-preset-react --save-dev</span><br></pre></td></tr></table></figure>
+<p>webpack.config.jsにloaderを使う記述を追記する。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;&#10;  entry: &#39;./src/main.js&#39;,&#10;  output: &#123;&#10;    path: __dirname,&#10;    filename: &#39;build/bundle.js&#39;&#10;  &#125;,&#10;  module: &#123;&#10;    loaders: [&#10;      &#123;&#10;        test: /\.js$/,&#10;        exclude: /node_modules/,&#10;        loader: &#39;babel&#39;,&#10;        query: &#123;&#10;          presets: [&#39;react&#39;]&#10;        &#125;&#10;      &#125;&#10;    ]&#10;  &#125;&#10;&#125;;</span><br></pre></td></tr></table></figure>
+<p>生成された<code>build/bundle.js</code>がコンパイルされていれば成功。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ webpack --watch</span><br></pre></td></tr></table></figure>
+<p>上記を実行しておくとファイルを保存するたびにコンパイルしてくれる。</p>
+<h2 id="u30C1_u30E5_u30FC_u30C8_u30EA_u30A2_u30EB_u3092_u306F_u3058_u3081_u308B"><a href="#u30C1_u30E5_u30FC_u30C8_u30EA_u30A2_u30EB_u3092_u306F_u3058_u3081_u308B" class="headerlink" title="チュートリアルをはじめる"></a>チュートリアルをはじめる</h2><p><a href="https://facebook.github.io/react/docs/getting-started.html" target="_blank" rel="external">https://facebook.github.io/react/docs/getting-started.html</a></p>
+<h3 id="u7C21_u5358_u306A_u30B5_u30F3_u30D7_u30EB_u3092_u52D5_u304B_u3059"><a href="#u7C21_u5358_u306A_u30B5_u30F3_u30D7_u30EB_u3092_u52D5_u304B_u3059" class="headerlink" title="簡単なサンプルを動かす"></a>簡単なサンプルを動かす</h3><p>公式の記述からちょっとだけ書き換えている。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;!DOCTYPE html&#62;&#10;&#60;html&#62;&#10;  &#60;head&#62;&#10;    &#60;meta charset=&#34;utf-8&#34; /&#62;&#10;    &#60;title&#62;React Tutorial&#60;/title&#62;&#10;    &#60;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/react/0.14.6/react.js&#34;&#62;&#60;/script&#62;&#10;    &#60;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/react/0.14.6/react-dom.js&#34;&#62;&#60;/script&#62;&#10;    &#60;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js&#34;&#62;&#60;/script&#62;&#10;    &#60;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js&#34;&#62;&#60;/script&#62;&#10;    &#60;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js&#34;&#62;&#60;/script&#62;&#10;  &#60;/head&#62;&#10;  &#60;body&#62;&#10;    &#60;div id=&#34;content&#34;&#62;&#60;/div&#62;&#10;    &#60;script src=&#34;build/bundle.js&#34;&#62;&#60;/script&#62;&#10;  &#60;/body&#62;&#10;&#60;/html&#62;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var CommentBox = React.createClass(&#123;&#10;  render: function() &#123;&#10;    return (&#10;      &#60;div className=&#34;commentBox&#34;&#62;&#10;        Hello, world! I am a CommentBox.&#10;      &#60;/div&#62;&#10;    );&#10;  &#125;&#10;&#125;);&#10;ReactDOM.render(&#10;  &#60;CommentBox /&#62;,&#10;  document.getElementById(&#39;content&#39;)&#10;);</span><br></pre></td></tr></table></figure>
+<p><img src="https://qiita-image-store.s3.amazonaws.com/0/49070/388fa354-384c-3916-ec1d-cee411d0f27f.png" alt="image"></p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js-React-JavaScript/">Node.js React JavaScript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-hexo_markdown_power_check" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">
