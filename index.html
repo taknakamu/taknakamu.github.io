@@ -47,6 +47,65 @@
     <div id="main">
       
   
+    <article id="post-git-rev-parse-show-toplevel" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/01/29/git-rev-parse-show-toplevel/" class="article-date">
+  <time datetime="2016-01-29T00:46:25.000Z" itemprop="datePublished">2016-01-29</time>
+</a>
+		</span>
+		<span class="meta-elements author">nmta</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 itemprop="name" class="entry-title">
+      <a class="article-title" href="/2016/01/29/git-rev-parse-show-toplevel/">git rev-parse --show-toplevel</a>
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<h2 id="Git_Advent_Calendar_2015"><a href="#Git_Advent_Calendar_2015" class="headerlink" title="Git Advent Calendar 2015"></a>Git Advent Calendar 2015</h2><p><a href="http://qiita.com/advent-calendar/2015/git" target="_blank" rel="external">http://qiita.com/advent-calendar/2015/git</a></p>
+<p>gitのadventカレンダー見てたら知らないコマンドとかいっぱいあって参考になるものばかり。</p>
+<h3 id="git_u306E_u30EB_u30FC_u30C8_u30C7_u30A3_u30EC_u30AF_u30C8_u30EA_u3068_u308B_u30B3_u30DE_u30F3_u30C9"><a href="#git_u306E_u30EB_u30FC_u30C8_u30C7_u30A3_u30EC_u30AF_u30C8_u30EA_u3068_u308B_u30B3_u30DE_u30F3_u30C9" class="headerlink" title="gitのルートディレクトリとるコマンド"></a>gitのルートディレクトリとるコマンド</h3><p><a href="http://qiita.com/karupanerura/items/721962bb7da3e34187e1" target="_blank" rel="external">http://qiita.com/karupanerura/items/721962bb7da3e34187e1</a></p>
+<p>そんな中で見つけたgitのルートディレクトリとるコマンド</p>
+<p><code>git rev-parse --show-toplevel</code></p>
+<p>いつも <code>..</code> やってたんでaliasつけとこうと思い、aliasを考えた。</p>
+<h3 id="git_root"><a href="#git_root" class="headerlink" title="git root"></a>git root</h3><p>gitのrootだから <code>grt</code> かなと思って、おもむろに <code>grt</code> ってうったら「そんなのねーよ」と言われない。</p>
+<p>おかしいと思って、 <code>alias grt</code> したら、</p>
+<p><code>grt=&#39;cd $(git rev-parse --show-toplevel || echo &quot;.&quot;)&#39;</code></p>
+<p>すでに設定されてた！<br>oh-my-zsh使ってるから多分そのgitプラグインが設定してたんだろう。</p>
+<p>gitのadventカレンダー見て、自分はoh-my-zshとネーミングセンスが一緒なんだ、という発見があった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+</article>
+
+
+	<hr class="article-devider">
+
+
+
+  
     <article id="post-rsync-sample" class="post">
 	<footer class="entry-meta-header">
 		<span class="meta-elements date">

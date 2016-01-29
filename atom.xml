@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://taknakamu.github.io/"/>
-  <updated>2016-01-26T08:00:56.000Z</updated>
+  <updated>2016-01-29T00:54:43.000Z</updated>
   <id>http://taknakamu.github.io/</id>
   
   <author>
@@ -13,6 +13,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[git rev-parse --show-toplevel]]></title>
+    <link href="http://taknakamu.github.io/2016/01/29/git-rev-parse-show-toplevel/"/>
+    <id>http://taknakamu.github.io/2016/01/29/git-rev-parse-show-toplevel/</id>
+    <published>2016-01-29T00:46:25.000Z</published>
+    <updated>2016-01-29T00:54:43.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="Git_Advent_Calendar_2015"><a href="#Git_Advent_Calendar_2015" class="headerlink" title="Git Advent Calendar 2015"></a>Git Advent Calendar 2015</h2><p><a href="http://qiita.com/advent-calendar/2015/git" target="_blank" rel="external">http://qiita.com/advent-calendar/2015/git</a></p>
+<p>gitのadventカレンダー見てたら知らないコマンドとかいっぱいあって参考になるものばかり。</p>
+<h3 id="git_u306E_u30EB_u30FC_u30C8_u30C7_u30A3_u30EC_u30AF_u30C8_u30EA_u3068_u308B_u30B3_u30DE_u30F3_u30C9"><a href="#git_u306E_u30EB_u30FC_u30C8_u30C7_u30A3_u30EC_u30AF_u30C8_u30EA_u3068_u308B_u30B3_u30DE_u30F3_u30C9" class="headerlink" title="gitのルートディレクトリとるコマンド"></a>gitのルートディレクトリとるコマンド</h3><p><a href="http://qiita.com/karupanerura/items/721962bb7da3e34187e1" target="_blank" rel="external">http://qiita.com/karupanerura/items/721962bb7da3e34187e1</a></p>
+<p>そんな中で見つけたgitのルートディレクトリとるコマンド</p>
+<p><code>git rev-parse --show-toplevel</code></p>
+<p>いつも <code>..</code> やってたんでaliasつけとこうと思い、aliasを考えた。</p>
+<h3 id="git_root"><a href="#git_root" class="headerlink" title="git root"></a>git root</h3><p>gitのrootだから <code>grt</code> かなと思って、おもむろに <code>grt</code> ってうったら「そんなのねーよ」と言われない。</p>
+<p>おかしいと思って、 <code>alias grt</code> したら、</p>
+<p><code>grt=&#39;cd $(git rev-parse --show-toplevel || echo &quot;.&quot;)&#39;</code></p>
+<p>すでに設定されてた！<br>oh-my-zsh使ってるから多分そのgitプラグインが設定してたんだろう。</p>
+<p>gitのadventカレンダー見て、自分はoh-my-zshとネーミングセンスが一緒なんだ、という発見があった。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="Git_Advent_Calendar_2015"><a href="#Git_Advent_Calendar_2015" class="headerlink" title="Git Advent Calendar 2015"></a>Git Advent Cal]]>
+    </summary>
+    
+      <category term="git" scheme="http://taknakamu.github.io/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[rsync sample]]></title>

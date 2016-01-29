@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>git rev-parse --show-toplevel | nmta blog</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Git Advent Calendar 2015http://qiita.com/advent-calendar/2015/git
+gitのadventカレンダー見てたら知らないコマンドとかいっぱいあって参考になるものばかり。
+gitのルートディレクトリとるコマンドhttp://qiita.com/karupanerura/items/721962bb7da3e34187e1
+そんな中で見つけたg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git rev-parse --show-toplevel">
+<meta property="og:url" content="http://taknakamu.github.io/2016/01/29/git-rev-parse-show-toplevel/index.html">
+<meta property="og:site_name" content="nmta blog">
+<meta property="og:description" content="Git Advent Calendar 2015http://qiita.com/advent-calendar/2015/git
+gitのadventカレンダー見てたら知らないコマンドとかいっぱいあって参考になるものばかり。
+gitのルートディレクトリとるコマンドhttp://qiita.com/karupanerura/items/721962bb7da3e34187e1
+そんな中で見つけたg">
+<meta property="og:updated_time" content="2016-01-29T00:54:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git rev-parse --show-toplevel">
+<meta name="twitter:description" content="Git Advent Calendar 2015http://qiita.com/advent-calendar/2015/git
+gitのadventカレンダー見てたら知らないコマンドとかいっぱいあって参考になるものばかり。
+gitのルートディレクトリとるコマンドhttp://qiita.com/karupanerura/items/721962bb7da3e34187e1
+そんな中で見つけたg">
+  
+    <link rel="alternative" href="/atom.xml" title="nmta blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">nmta blog</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://taknakamu.github.io"></form>
+	</div>
+</header>
+    <div id="main">
+      <article id="post-git-rev-parse-show-toplevel" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2016/01/29/git-rev-parse-show-toplevel/" class="article-date">
+  <time datetime="2016-01-29T00:46:25.000Z" itemprop="datePublished">2016-01-29</time>
+</a>
+		</span>
+		<span class="meta-elements author">nmta</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      git rev-parse --show-toplevel
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<h2 id="Git_Advent_Calendar_2015"><a href="#Git_Advent_Calendar_2015" class="headerlink" title="Git Advent Calendar 2015"></a>Git Advent Calendar 2015</h2><p><a href="http://qiita.com/advent-calendar/2015/git" target="_blank" rel="external">http://qiita.com/advent-calendar/2015/git</a></p>
+<p>gitのadventカレンダー見てたら知らないコマンドとかいっぱいあって参考になるものばかり。</p>
+<h3 id="git_u306E_u30EB_u30FC_u30C8_u30C7_u30A3_u30EC_u30AF_u30C8_u30EA_u3068_u308B_u30B3_u30DE_u30F3_u30C9"><a href="#git_u306E_u30EB_u30FC_u30C8_u30C7_u30A3_u30EC_u30AF_u30C8_u30EA_u3068_u308B_u30B3_u30DE_u30F3_u30C9" class="headerlink" title="gitのルートディレクトリとるコマンド"></a>gitのルートディレクトリとるコマンド</h3><p><a href="http://qiita.com/karupanerura/items/721962bb7da3e34187e1" target="_blank" rel="external">http://qiita.com/karupanerura/items/721962bb7da3e34187e1</a></p>
+<p>そんな中で見つけたgitのルートディレクトリとるコマンド</p>
+<p><code>git rev-parse --show-toplevel</code></p>
+<p>いつも <code>..</code> やってたんでaliasつけとこうと思い、aliasを考えた。</p>
+<h3 id="git_root"><a href="#git_root" class="headerlink" title="git root"></a>git root</h3><p>gitのrootだから <code>grt</code> かなと思って、おもむろに <code>grt</code> ってうったら「そんなのねーよ」と言われない。</p>
+<p>おかしいと思って、 <code>alias grt</code> したら、</p>
+<p><code>grt=&#39;cd $(git rev-parse --show-toplevel || echo &quot;.&quot;)&#39;</code></p>
+<p>すでに設定されてた！<br>oh-my-zsh使ってるから多分そのgitプラグインが設定してたんだろう。</p>
+<p>gitのadventカレンダー見て、自分はoh-my-zshとネーミングセンスが一緒なんだ、という発見があった。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/01/26/rsync-sample/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          rsync sample
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:taknakamu.github.io">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">nmta blog</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2016 nmta<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+  </div>
+</body>
+</html>
